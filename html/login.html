@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <title>BIKETOURS</title>
+</head>
+<body class="body">
+    <header class="encabezado">
+        <link rel="stylesheet" href="../css/header.css">
+        <div class="wrapper">
+            <div class="logo">
+               <p><a href="inicio.html"><img src="../img/logo.png" alt="logo" width="35%"></a></p>
+            </div>
+            <nav>
+                <a href="inicio.html">Inicio</a>
+                <a href="../html/nosotros.html">¿Quiénes somos?</a>
+            </nav>
+        </div>
+    </header>
+    <div id="contenedorCarga">
+        <div id="carga"></div>
+    </div>
+    <div class="contenedor">
+        <div class="contLogin">
+            <form class="formlogin" id='formIngresar'>
+                <h2 class="titulo">INICIAR SESIÓN</h2>
+                <div class="divlogi">
+                    <ion-icon name="person-outline" size="small"></ion-icon>
+                    <input type="text" class="inputlogi" name="usuario" id="logiCorreo" placeholder="Correo">
+                </div>
+                <div class="divlogi">
+                    <ion-icon name="key-outline" size="small"></ion-icon>
+                    <input type="password" class="inputlogi" name="password" id="logiPassword" placeholder="Contraseña">
+                    <ion-icon name="eye" id="ojo" class="ojito"></ion-icon>
+                </div>
+                <button type="submit" class="boton">Ingresar</button>
+                <p class="regis">¿No tienes una cuenta?<a href="registro.html"> Regístrate gratis aquí</a></p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
