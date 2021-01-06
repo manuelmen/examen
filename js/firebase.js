@@ -94,10 +94,68 @@ if(formregis){
           .catch(function(error) {
               console.log('ERRO');
               if(error.code =='auth/invalid-email'){
+                window.alert("El correo en invalido o ya existe en nuestra base de datos");
               }
           });
       }else{
           console.log('no correcto');
       }
   })
+}
+
+////
+///Ingreso de usuario
+const formIngresar = document.querySelector('#formIngresar');
+if(formIngresar){
+    formIngresar.addEventListener('submit', e =>{
+        e.preventDefault();
+        const correo = document.querySelector('#logiCorreo').value;
+        const password = document.querySelector('#logiPassword').value;
+        auth
+            .signInWithEmailAndPassword(correo,password)
+            .then(userCredential=>{
+                console.log('ingreso')
+                VerificaElUsuario();
+            })
+            .catch(function(error) {
+                Carga.style.visibility = 'hidden';
+                Carga.style.opacity = '0';
+                if(error.code == 'auth/user-not-found' || error.code =='auth/invalid-email'){
+                  window.alert('El usuario no esta registrado');
+                }else if(error.code == 'auth/wrong-password'){
+                  window.alert('La contraseña esta incorrecta');
+                }
+            });
+            
+    })
+}
+//Verificamos al usuario
+const VerificaElUsuario = ()=>{
+  auth.onAuthStateChanged( async user =>{
+      if(user){
+          const getCivlistas = await db.collection("ciclista").where("correo", "==", `${user.email}`).get();
+          if(getCivlistas.docChanges().length >= 1){
+              getCivlistas.forEach(doc => {
+                  //menuOcul2.style.display= 'none';
+                  window.location.href='../html/reserva.html';
+              })
+          }else{
+              window.location.href='../html/consulta.html';
+          }
+      }else{
+          console.log('no login');
+      }
+  });
+}
+
+//cerrar secion
+const sesionAdmin = document.querySelector('#sesionAdmin');
+if(sesionAdmin){
+    sesionAdmin.addEventListener('click',e =>{
+        console.log('cerrar');
+        e.preventDefault();
+        auth.signOut().then(()=>{
+            window.location.href='../login.html';
+        })
+    })
 }
