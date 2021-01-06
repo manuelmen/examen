@@ -10,3 +10,4 @@ var firebaseConfig = {
 
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
+  console.log('hola');
