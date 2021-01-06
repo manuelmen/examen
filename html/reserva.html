@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <title>BIKETOURS</title>
+</head>
+<body class="body">
+  
+    <header class="encabezado">
+        <link rel="stylesheet" href="../css/header.css">
+        <div class="wrapper">
+            <div class="logo">
+               <p><a><img src="../img/logo.png" alt="logo" width="35%"></a></p>
+            </div>
+            <nav>
+                <a href="inicio.html">Cerrar sesión</a>
+            </nav>
+        </div>
+    </header>
+
+    <div id="contenedorCarga">
+        <div id="carga"></div>
+    </div>
+
+    <div class="contenedorReserva">
+    <div class="FormReserva">
+        <form id="ReservaCita">
+            <h2 class="titulo">Solicitud de rutas</h2>
+            <h3 class="datoscicli">Datos del ciclista:</h3>
+            <div class="DatosPaci">
+                <p class="celdaDatoL">
+                    <label for="nombres">Nombres:</label>
+                    <input type="text" class="inputReser" id="nombres" name="nombres" required>
+                    <small class="Error" id="ErrorVnombre">No debe contener caracteres especiales y hasta 50 max.</small>
+                </p>
+                <p class="celdaDatoR">
+                    <label for="apellidos">Apellidos: </label>
+                    <input type="text" class="inputReser" id="apellidos" name="apellidos" required>
+                    <small class="Error" id="ErrorVapellido">No debe contener caracteres especiales y hasta 50 max.</small>
+                </p>
+                <p class="celdaDatoL">
+                    <label for="cedula">Cédula: </label>
+                    <input type="number" class="inputReser" id="cedula" name="cedula" required>
+                    <small class="Error" id="ErrorVcedula">No debe contener caracteres especiales y debe contener 10 números</small>
+                </p>
+                <p class="celdaDatoR">
+                    <label for="edad">Edad: </label>
+                    <input type="number" class="inputReser" id="edad" name="edad" required>
+                    <small class="Error" id="ErrorVedad">Números enteros positivos hasta 150 años max.</small>
+                </p>
+
+            </div>
+            <div class="">
+                <h3 class="datosruta">Datos de la ruta:</h3>
+                <p class="celdaDatoL"><label for="especialidad" class="labelReserva">Ruta:</label>
+                <select name="especialida" id="especialidad" class="inputReserC">
+                    <option value="Medicina General">Ruta interna Manta</option>
+                    <option value="Ginecología">Ruta San Mateo</option>
+                    <option value="Cardiología">Ruta Santa Marianita</option>
+                    <option value="Odontología">Ruta Spondylus</option>
+                </select></p>
+                <p class="celdaDatoL"><label for="fecha" class="labelReserva">Fecha:</label>
+                <input type="date" class="inputReserC" name="fecha" id="fecha" required></p>
+                <p class="celdaDatoL"><label for="hora" class="labelReserva">Hora:</label>
+                    <input type="time" class="inputReserC" name="hora" id="hora" required></p>
+            </div>
+            <button type="submit" class="boton">Solicitar</button>
+        </form>
+    </div>
+    </div>
+
+    <footer>
+        <div class="footerContenido">
+            <h3>BikeTours</h3>
+            <P>Conoce mientras recorres.</br>
+                (+593) 093 984 6313</P>
+            <ul class="social">
+                <li><a href="https://www.facebook.com/" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                <li><a href="https://twitter.com/" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                <li><a href="https://www.youtube.com/" target="_blank"><ion-icon name="logo-youtube"></ion-icon></a></li>
+            </ul>
+        </div>
+        <div class="footerCopy">
+            <p>copyrigth &copy;2020 BikeTours. diseñado por <span>Manuel MEndoza Paz</span></p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -244,9 +244,7 @@
     background: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
 }
-.avatar{
-    width: 100px;
-}
+
 .titulo{
     font-size: 2rem;
     text-transform: uppercase;
@@ -361,11 +359,11 @@
     cursor: pointer;
 }
 .FormReserva{
-    margin: 10px auto;
+    margin: 120px auto;
     width: 65%;
-    background: rgb(255 254 254 / 70%);
+    background:  rgba(0, 0, 0, 0.5);
     border-radius: 10px;
-    padding: 50px;
+    padding: 25px;
 }
 .DatosPaci{
     display: grid;
@@ -391,29 +389,45 @@
     width:120px;
     float:left;
     text-align:left;
+    color: #ffffff;
 }
 .celdaDatoL{
     margin: 20px 0;
     padding-right: 10%;
+    color: #ffffff;
 }
 .celdaDatoR{
     margin: 20px 0;
     padding-left: 10%;
+    color: #ffffff;
 }
+
+.datoscicli{
+    color:#038eff;
+}
+
+.datosruta {
+color: #038eff;
+}
+
+
 .eldivtable{
     overflow:scroll;
     height:400px;
     width:100%;
 }
 .contenedorP{
-    padding: 0 50px;
-    color: #333;
+    padding: 95px;
+    color: rgba(0, 0, 0, 0.5);
+   
+  
 }
 .cabecera{
     display: grid;
     grid-template-columns: 1fr 2fr;
-    padding: 30px 0;
+    padding: 3px;
     align-items: center;
+    color: black;
 }
 
 /*busqueda*/
@@ -444,10 +458,10 @@
     border: none;
     outline: none;
     cursor: pointer;
-    background: #4abdac;
+    background: #000000;
 }
 .ConBusqueda button ion-icon{
-    color: #fff !important;
+    color: #038eff !important;
     font-size: 0.95rem;
 }
 .ConBusqueda #desde,#hasta{
@@ -464,7 +478,7 @@
     border: none;
     outline: none;
     cursor: pointer;
-    background: #4abdac;
+    background: #000000;
 }
 .ojito{
     cursor: pointer;
@@ -505,7 +519,7 @@ table {
     vertical-align: middle;
  }
  thead{
-     background-color: #4abdac;
+     background-color: #090909;
      color: #fff;
      border-bottom: solid 3px #333;
  }
@@ -513,7 +527,7 @@ table {
      background-color: #ddd;
  }
  tr:hover td{
-    background-color: #97ebf1;
+    background-color: #038eff;
  }
  .btnVer, .btnListo{
     padding: 15px;
@@ -521,7 +535,7 @@ table {
     border: none;
     outline: none;
     cursor: pointer;
-    background: #4abdac;
+    background: #038eff;
     color: #fff;
 }
 /*Ventana Modal de detale*/
@@ -605,7 +619,7 @@ table {
     border: none;
     outline: none;
     cursor: pointer;
-    background-color: #4abdac;
+    background-color: #038eff;
     color: #fff;
     margin: 0 20px;
     font-size: 1.1rem;
