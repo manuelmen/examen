@@ -10,7 +10,7 @@
     height: 100vh; 
 }
 
-/*Paguina de Inicio*/
+/*Inicio*/
 .ContenidoInicio{
     background-image: url('../img/inicio1.jpg');
     background-size: cover;
@@ -81,7 +81,7 @@
 }
 
 /**/
-/*Pagina Nosotros*/
+/*¿quiénes somos?*/
 .Nosotros2{
     height: 100vh;
     display: flex;
@@ -171,7 +171,7 @@
     height: auto;
 }
 /**/
-/*Rueda Cargando*/
+/*icono de carga*/
 
 #contenedorCarga{
     background-color: rgba(250, 240, 245, 0.842);
@@ -203,7 +203,7 @@
     to{transform: rotate(360deg);}
 }
 
-/*----------------------*/
+/**/
 .contenedor{
     display: grid;
     height: 100vh;
@@ -213,7 +213,7 @@
     display: grid;
     padding: 0 2rem;
 }
-/*MENSAJE DE ERROR*/
+/*notificación de error*/
 .Error{
     text-align: start !important;
     color: #e74c3c;
@@ -431,7 +431,7 @@ color: #038eff;
     
 }
 
-/*busqueda*/
+/*buscar*/
 #Busqueda{
     height: 40px;
     border: none;
@@ -626,7 +626,7 @@ table {
     font-size: 1.1rem;
 }
 /**/
-/*FOOTER*/
+/*footer*/
 footer{
     background-color: #646968;
     height: auto;
