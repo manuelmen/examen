@@ -8,7 +8,6 @@
     <title>BIKETOURS</title>
 </head>
 <body class="body">
-    
     <header class="encabezado">
         <link rel="stylesheet" href="../css/header.css">
         <div class="wrapper">
@@ -16,43 +15,26 @@
                <p><a><img src="../img/logo.png" alt="logo" width="35%"></a></p>
             </div>
             <nav>
-                <a href="administrar.html">Administración</a>
+                <a href="../html/consulta.html">Consulta</a>
                 <a href="inicio.html">Cerrar sesión</a>
             </nav>
         </div>
     </header>
-
-    <div id="ContenidoConsulta">
-    <div class="contenedorP">
+    <div id="ContenidoAdministrador">
+    <div class="FormReserva">
         <div class="cabecera">
-            <h1>Ciclistas interesados</h1>
+            <h1>Lista de ciclistas</h1>
             <form id="BusquedaCita" class="BusquedaCita">
                 <p class="ConBusqueda">
                     <input type="search" id="Busqueda" name="busqueda" placeholder="Buscar">
                     <select name="busquedaPor" id="busquedaPor">
-                        <option value="ruta">Ruta</option>
-                        <option value="fecha">Fecha</option>           
+                        <option value="cedula">Ruta</option>
+                        <option value="nombres">Fecha</option>             
                     </select>
-                    <button type="submit" ><ion-icon class="iconbuscar" name="search"></ion-icon></button>
+                    <button type="submit" ><ion-icon name="search"></ion-icon></button>
                 </p>
             </form>
         </div>
-        <div class="filtraciones">
-            <form id="Filtrar">
-                  <button class="Limpiare"  type="submit" onclick="location.reload()">LIMPIAR</button>
-            </form>
-            <form id="FiltrarFecha" class="filtrafecha">
-                <p class="ConBusqueda">
-                  Fecha desde:
-                  <input type="date" name="desde" id="desde">
-                  Hasta:
-                  <input type="date" name="hasta" id="hasta">
-                  <button type="submit"><ion-icon name="funnel"></ion-icon></button>
-                </p>
-              
-            </form>
-        </div>
-        
         <div class="eldivtable">
         <table id='CitasContenedor'>
             <thead>
@@ -62,24 +44,11 @@
                     <th>Apellidos</th>
                     <th>Edad</th>
                     <th>Ruta</th>
-                    <th>Acción</th>
+                    <th>Selección</th>
                 </tr>
             </thead>
             <tbody id="BodyCitas"></tbody>
         </table>
-        </div>
-    </div>
-    <div class="ventanaModal" id="ventanaModal"> 
-        <div class="modal">
-            <div id="cerrarModal">
-                <span>x</span>
-            </div>
-            <h1>Solicitud de</h1>
-            <div id="modal"></div>
-            <div class="btnModal">
-                <button id="aprobar">Aprobar</button>
-                <button id="negar">Negar</button>
-            </div>
         </div>
     </div>
     </div>
