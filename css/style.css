@@ -20,7 +20,7 @@
     align-items: center;
 }
 .Bienvenido{
-    width: 35%;
+    width: 40%;
     margin: 0 100px;
 }
 .Servicio{
@@ -117,7 +117,10 @@
     color: #ffffff;
 
 }
-
+.H2Contacto h2{
+    text-align: center;
+    margin: 30px 0;
+}
 
 .ContenValores{
     height: 100vh;
@@ -147,9 +150,6 @@
 }
 .PContacto{
     padding: 50px 0;
-}
-.PContacto h2 ,h1{
- text-align: center;
 }
 .contacto{
     display: grid;
@@ -241,8 +241,7 @@
 }
 .formlogin{
     padding: 25px;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.8);
 }
 
 .titulo{
@@ -323,7 +322,6 @@
     color: #4abdac;
 }
 .div2{
-    display: flex;
     margin-right: -15px;
     margin-left: -15px;
 }
@@ -361,19 +359,21 @@
 .FormReserva{
     margin: 120px auto;
     width: 65%;
-    background:  rgba(0, 0, 0, 0.378);
+    background:  rgba(0, 0, 0, 0.8);
     border-radius: 10px;
     padding: 25px;
 }
-.DatosPaci{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+#RegisRuta{
+    padding: 2px 70px;
 }
 .inputReser{
+    BACKGROUND: none;
+    border: none;
+    border-bottom: 2px solid #00cbff;
+    color: #fff;
     outline: none;
     height: 30px;
     width: 100%;
-    color: #333;
     font-family: 'Poppins', sans-serif;
     font-size: 1.2rem;
 }
@@ -381,7 +381,6 @@
     outline: none;
     height: 30px;
     width: 50%;
-    color: #333;
     font-family: 'Poppins', sans-serif;
     font-size: 1.2rem;
 }
@@ -396,11 +395,6 @@
     padding-right: 10%;
     color: #ffffff;
 }
-.celdaDatoR{
-    margin: 20px 0;
-    padding-left: 10%;
-    color: #ffffff;
-}
 
 .datoscicli{
     color:#038eff;
@@ -410,12 +404,6 @@
 color: #038eff;
 }
 
-
-.eldivtable{
-    overflow:scroll;
-    height:400px;
-    width:100%;
-}
 .contenedorP{
     padding: 95px;
     color: rgba(0, 0, 0, 0.5);
@@ -434,10 +422,10 @@ color: #038eff;
 /*buscar*/
 #Busqueda{
     height: 40px;
+    width: auto;
     border: none;
     outline: none;
     padding: 0 25px;
-    color: #333;
     font-size: 0.95rem;
 }
 .ConBusqueda select{
@@ -451,7 +439,7 @@ color: #038eff;
     border-right: 15px solid #fff;
     
 }
-.ConBusqueda button{
+.ConBusqueda .fe{
     position: relative;
     left: -5px;
     width: 40px;
@@ -481,28 +469,16 @@ color: #038eff;
     cursor: pointer;
     background: #000000;
 }
-.ojito{
-    cursor: pointer;
-    font-size: 20px;
-    color: rgb(255, 255, 255);
-}
-.ojito.activo{
-    color: dodgerblue;
-}
 /**/
-.BusquedaCita{
-    text-align: end;
-}
 .filtraciones{
     display: grid;
     grid-template-columns: 1fr 2fr;
-    padding-bottom: 15px;
     align-items: center;
-    padding: 15px;
+    padding: 15px 0;
     margin-bottom: 10px;
     align-items: center;
-    background: #fff;
     border-radius: 8px;
+    color: #000;
 }
 .filtrafecha{
     text-align: end;
@@ -510,7 +486,7 @@ color: #038eff;
 table {
     width: 100%;
     border-collapse: collapse;
-    background: rgb(255 254 254 / 80%);
+    background: #fff;
  }
  th, td {
     text-align: left;
@@ -528,9 +504,12 @@ table {
      background-color: #ddd;
  }
  tr:hover td{
-    background-color: #038eff;
+    background-color: #ebebeb;
  }
- .btnVer, .btnListo{
+ #BodyRutas{
+     color: #000;
+ }
+ .btnAceptar{
     padding: 15px;
     font-size: 0.95rem;
     border: none;
@@ -539,93 +518,15 @@ table {
     background: #038eff;
     color: #fff;
 }
-/*Ventana Modal de detale*/
-.ventanaModal{
-    display: flex;
-    background-color: rgba(0,0,0,0.3);
-    align-items: center;
-    justify-content: center;
-    position:fixed;
-    pointer-events: none;
-    opacity: 0;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-}
-.show{
-    pointer-events: auto;
-    opacity: 1;
-}
-.modal{
-    background-color: #fff;
-    color: #333;
-    width: 600px;
-    max-width: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 30px 50px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-    text-align: center;
-}
-#cerrarModal{
-    background: white;
-    position: absolute;
-    right: -20px;
-    color:  #4abdac;
-    top: -20px;
-    width: 40px;
-    height: 40px;
-    border-radius: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-.Detalle{
-    display: grid;
-    grid-template-columns: auto 1fr auto 1fr;
-    text-align: start;
-    margin: 30px 0;
-    font-size: 1.1rem;
-}
-.Detalle h5,.Detalle p{
-    padding: 10px;
-}
-.Detalle input{
-    width: 65%;
-}
-.Detalle .fechaHora{
-    text-align: end;
-}
-.Detalle .large1{
-    grid-column: 2 / 5;
-}
-.Detalle .large2{
-    grid-column: 1 / 5;
-}
-.btnModal{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-.btnModal button{
-    padding: 10px;
+.btnRechazar{
+    padding: 15px;
+    font-size: 0.95rem;
     border: none;
     outline: none;
     cursor: pointer;
-    background-color: #038eff;
+    background: #eb323b;
     color: #fff;
-    margin: 0 20px;
-    font-size: 1.1rem;
 }
-/**/
 /*footer*/
 footer{
     background-color: #646968;
@@ -659,7 +560,6 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 1rem 0 3rem 0;
 }
 .social li{
     margin: 0 10px;
@@ -672,7 +572,6 @@ footer{
     font-size: 1.1rem;
 }
 .footerCopy{
-    background: #000000;
     width: 100%;
     padding: 20px 0;
     text-align: center;
@@ -681,10 +580,5 @@ footer{
     font-size: 14px;
     word-spacing: 2px;
     text-transform: capitalize;
-}
-.footerCopy span{
-    text-transform: uppercase;
-    opacity: .4;
-    font-weight: 200;
 }
 /**/

@@ -16,8 +16,7 @@
                <p><a><img src="../img/logo.png" alt="logo" width="35%"></a></p>
             </div>
             <nav>
-                <a href="administrar.html">Administración</a>
-                <a href="inicio.html">Cerrar sesión</a>
+                <a href="#" id="sesion">Cerrar sesión</a>
             </nav>
         </div>
     </header>
@@ -26,20 +25,19 @@
     <div class="contenedorP">
         <div class="cabecera">
             <h1>Ciclistas interesados</h1>
-            <form id="BusquedaCita" class="BusquedaCita">
-                <p class="ConBusqueda">
-                    <input type="search" id="Busqueda" name="busqueda" placeholder="Buscar">
-                    <select name="busquedaPor" id="busquedaPor">
-                        <option value="ruta">Ruta</option>
-                        <option value="fecha">Fecha</option>           
-                    </select>
-                    <button type="submit" ><ion-icon class="iconbuscar" name="search"></ion-icon></button>
-                </p>
-            </form>
+            
         </div>
         <div class="filtraciones">
-            <form id="Filtrar">
-                  <button class="Limpiare"  type="submit" onclick="location.reload()">LIMPIAR</button>
+            <form id="BusquedaRuta">
+                <p class="ConBusqueda">
+                    <select name="Busqueda" id="Busqueda" >
+                        <option value="Ruta interna Manta">Ruta interna Manta</option>
+                        <option value="Ruta San Mateo">Ruta San Mateo</option>
+                        <option value="Ruta Santa Marianita">Ruta Santa Marianita</option>
+                        <option value="Ruta Spondylus">Ruta Spondylus</option>
+                    </select>
+                    <button class="fe" type="submit" ><ion-icon class="iconbuscar" name="search"></ion-icon></button>
+                </p>
             </form>
             <form id="FiltrarFecha" class="filtrafecha">
                 <p class="ConBusqueda">
@@ -47,7 +45,8 @@
                   <input type="date" name="desde" id="desde">
                   Hasta:
                   <input type="date" name="hasta" id="hasta">
-                  <button type="submit"><ion-icon name="funnel"></ion-icon></button>
+                  <button class="fe" type="submit"><ion-icon class="iconbuscar" name="search"></ion-icon></button>
+                  <button class="Limpiare"  onclick="location.reload()">LIMPIAR</button>
                 </p>
               
             </form>
@@ -62,24 +61,12 @@
                     <th>Apellidos</th>
                     <th>Edad</th>
                     <th>Ruta</th>
+                    <th>Estado</th>
                     <th>Acción</th>
                 </tr>
             </thead>
-            <tbody id="BodyCitas"></tbody>
+            <tbody id="BodyRutas"></tbody>
         </table>
-        </div>
-    </div>
-    <div class="ventanaModal" id="ventanaModal"> 
-        <div class="modal">
-            <div id="cerrarModal">
-                <span>x</span>
-            </div>
-            <h1>Solicitud de</h1>
-            <div id="modal"></div>
-            <div class="btnModal">
-                <button id="aprobar">Aprobar</button>
-                <button id="negar">Negar</button>
-            </div>
         </div>
     </div>
     </div>

@@ -15,8 +15,7 @@
             <div class="logo">
                <p><a><img src="../img/logo.png" alt="logo" width="35%"></a></p>
             </div>
-            <nav>
-                <a href="inicio.html">Cerrar sesión</a>
+            <nav id="men">
             </nav>
         </div>
     </header>
@@ -27,16 +26,15 @@
 
     <div class="contenedorReserva">
     <div class="FormReserva">
-        <form id="ReservaCita">
+        <form id="RegisRuta">
             <h2 class="titulo">Solicitud de rutas</h2>
-            <h3 class="datoscicli">Datos del ciclista:</h3>
             <div class="DatosPaci">
                 <p class="celdaDatoL">
                     <label for="nombres">Nombres:</label>
                     <input type="text" class="inputReser" id="nombres" name="nombres" required>
                     <small class="Error" id="ErrorVnombre">No debe contener caracteres especiales y hasta 50 max.</small>
                 </p>
-                <p class="celdaDatoR">
+                <p class="celdaDatoL">
                     <label for="apellidos">Apellidos: </label>
                     <input type="text" class="inputReser" id="apellidos" name="apellidos" required>
                     <small class="Error" id="ErrorVapellido">No debe contener caracteres especiales y hasta 50 max.</small>
@@ -46,7 +44,7 @@
                     <input type="number" class="inputReser" id="cedula" name="cedula" required>
                     <small class="Error" id="ErrorVcedula">No debe contener caracteres especiales y debe contener 10 números</small>
                 </p>
-                <p class="celdaDatoR">
+                <p class="celdaDatoL">
                     <label for="edad">Edad: </label>
                     <input type="number" class="inputReser" id="edad" name="edad" required>
                     <small class="Error" id="ErrorVedad">Números enteros positivos hasta 150 años max.</small>
@@ -54,13 +52,12 @@
 
             </div>
             <div class="">
-                <h3 class="datosruta">Datos de la ruta:</h3>
-                <p class="celdaDatoL"><label for="especialidad" class="labelReserva">Ruta:</label>
-                <select name="especialida" id="especialidad" class="inputReserC">
-                    <option value="Medicina General">Ruta interna Manta</option>
-                    <option value="Ginecología">Ruta San Mateo</option>
-                    <option value="Cardiología">Ruta Santa Marianita</option>
-                    <option value="Odontología">Ruta Spondylus</option>
+                <p class="celdaDatoL"><label for="ruta" class="labelReserva">Ruta:</label>
+                <select name="especialida" id="ruta" class="inputReserC">
+                    <option value="Ruta interna Manta">Ruta interna Manta</option>
+                    <option value="Ruta San Mateo">Ruta San Mateo</option>
+                    <option value="Ruta Santa Marianita">Ruta Santa Marianita</option>
+                    <option value="Ruta Spondylus">Ruta Spondylus</option>
                 </select></p>
                 <p class="celdaDatoL"><label for="fecha" class="labelReserva">Fecha:</label>
                 <input type="date" class="inputReserC" name="fecha" id="fecha" required></p>
@@ -84,7 +81,7 @@
             </ul>
         </div>
         <div class="footerCopy">
-            <p>copyrigth &copy;2020 BikeTours. diseñado por <span>Manuel MEndoza Paz</span></p>
+            <p>copyrigth &copy;2020 BikeTours</p>
         </div>
     </footer>
 
