@@ -1,8 +1,7 @@
 # Examen
 Microproyecto de la materia Optativa I del Septimo semestre.
 
-# Alumno:
-Manuel Arturo Mendoza Paz
+Alumno: Manuel Arturo Mendoza Paz
 
 # Sitio Web BikeTours.
 Es un sitio web en la cual se puede solicitar unirse bicirutas para realizar cicloturismo a nivel de Manta.
@@ -28,5 +27,4 @@ Al ingresar como usuario normal se nos muestra un formulario para solicitar unir
 # Administrador 
 Al ingresar como usuario administrador al sitio web, nos aparecera una lista de los ciclistas interasados en las rutas en una tabla la cual nos mostrara datos como : la cédula, nombres, apellidos, edad y la ruta además de una aopción llamada Acción con la cual el administrador podra aceptar o rechazar al ciclista interesado en la ruta, también encontramos un metodo de busqueda de ciclistas basado en las rutas disponibles al igual que una busqueda y filtrado por fecha el cual cuenta con un boton Limpiar para refrescar los campos de las fechas y por último en la cabecera no encontramos con la opción Cerrar sesión la cual noo permite salir del sitio y nos dirige nuevamente al login.
 
-Usuario adminstrador: admins@gmail.com
-Contraseña: admins
+Usuario adminstrador: admins@gmail.com      Contraseña: admins
