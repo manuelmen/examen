@@ -85,7 +85,7 @@ if(formregis){
                 })
                 .then(function() {
                   window.alert("Usuario Registrado");
-                  window.location.href='../html/login.html';
+                  window.location.href='login.html';
                   console.log('registrado')
                 })
                 .catch(function(error) {
@@ -142,10 +142,10 @@ const VerificaElUsuario = ()=>{
           if(getCivlistas.docChanges().length >= 1){
               getCivlistas.forEach(doc => {
                   //menuOcul2.style.display= 'none';
-                  window.location.href='../html/reserva.html';
+                  window.location.href='reserva.html';
               })
           }else{
-              window.location.href='../html/consulta.html';
+              window.location.href='consulta.html';
           }
       }else{
           console.log('no login');
@@ -176,7 +176,7 @@ if(RegisRuta){
         Vcedula: false,
         Vedad: false
     }
-    //velidamos los inputs
+    //validamos los inputs
     const ValidarInputs = (e) => {
         console.log(e.target.name);
         switch(e.target.name){
@@ -264,7 +264,7 @@ if(ContenidoConsulta){
         console.log('cerrar');
         e.preventDefault();
         auth.signOut().then(()=>{
-            window.location.href='../html/login.html';
+            window.location.href='login.html';
         })
     })
 }
@@ -343,9 +343,9 @@ auth.onAuthStateChanged( async user =>{
     if(user){
         console.log('logiado');
         men.innerHTML += `
-        <a href="../html/inicio.html">Inicio</a>
-        <a href="../html/reserva.html">Solucitud Ruta</a>
-        <a href="../html/nosotros.html">¿Quiénes somos?</a>
+        <a href="inicio.html">Inicio</a>
+        <a href="reserva.html">Solucitud Ruta</a>
+        <a href="nosotros.html">¿Quiénes somos?</a>
         <a href="#" id="sesion">Cerrar sesión</a>
         `
         //Cerrar sesión
@@ -354,14 +354,14 @@ auth.onAuthStateChanged( async user =>{
             console.log('cerrar');
             e.preventDefault();
             auth.signOut().then(()=>{
-                window.location.href='../html/login.html';
+                window.location.href='login.html';
             })
         })
     }else{
         men.innerHTML += `
-        <a href="../html/inicio.html"">Inicio</a>
-        <a href="../html/nosotros.html">¿Quiénes somos?</a>
-        <a href="../html/login.html" >iniciar sesión</a>
+        <a href="inicio.html"">Inicio</a>
+        <a href="nosotros.html">¿Quiénes somos?</a>
+        <a href="login.html" >iniciar sesión</a>
         `
         //Cerrar sesión
         const sesion = document.querySelector('#sesion');
@@ -369,7 +369,7 @@ auth.onAuthStateChanged( async user =>{
             console.log('cerrar');
             e.preventDefault();
             auth.signOut().then(()=>{
-                window.location.href='../html/login.html';
+                window.location.href='login.html';
             })
         })
     }
